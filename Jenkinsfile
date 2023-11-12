@@ -2,7 +2,7 @@ pipeline {
   agent any
   triggers {
     // Trigger the build every 10 seconds
-    poll(10)
+    githubPush()
   }
   stages {
     stage('Build') {
